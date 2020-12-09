@@ -16,7 +16,7 @@ use ybjd/erppush;
 $erpPush = new Erppush([
     'username'  => 'test',//账号名
     'password'  => 'test',//密码
-    'signKey'   => 'db8ebff65c0c5050299dc2b35a141e1f',//接口密钥
+    'signKey'   => 'db8ebff65c0c5050299dc2bo8a141e5f',//接口密钥
     'checkSign' => 1,//是否启动验签 0否 1是
 ]);
 try {
