@@ -7,7 +7,7 @@
  * 功能说明：异常类
  *
  **/
-namespace ybjd\Exception;
+namespace Erppush\Exception;
 class WeException extends \Exception
 {
     public static $errorMessage = [

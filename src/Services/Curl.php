@@ -7,8 +7,8 @@
  * 功能说明：Curl
  *
  **/
-namespace ybjd\Services;
-use ybjd\Exception\WeException;
+namespace Erppush\Services;
+use Erppush\Exception\WeException;
 
 class Curl
 {

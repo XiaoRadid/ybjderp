@@ -7,9 +7,9 @@
  * 功能说明：BaseErppush
  *
  **/
-namespace ybjd;
-use ybjd\Services\Curl;
-use ybjd\Exception\WeException;
+namespace Erppush;
+use Erppush\Services\Curl;
+use Erppush\Exception\WeException;
 
 class BaseErppush
 {
