@@ -1,6 +1,6 @@
 <?php
 use ybjd\Erppush;
-include_once "library/autoload.php";
+require './vendor/autoload.php';
 
 $erpPush = new Erppush([
 	'username' 	=> 'qudaoshang',//账号名
@@ -17,7 +17,6 @@ $erpPush = new Erppush([
 # downImages       图片保存
 
 try {
-
 	# 订单推送示例
 	$order = array(
 		0 => array(
