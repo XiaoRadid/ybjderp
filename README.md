@@ -1,4 +1,4 @@
-﻿#### 安装(PHP>=5.3.29)
+﻿#### 安装(PHP>=5.4.45)
 composer require ybjd/erppush
   
 #### 实现的接口
@@ -11,7 +11,7 @@ downImages       图片保存
   
 #### 示例
 ```php
-use ybjd/erppush;
+use Erppush\Erppush;
 
 $erpPush = new Erppush([
     'username'  => 'test',//账号名

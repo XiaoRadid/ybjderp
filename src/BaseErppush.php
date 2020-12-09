@@ -14,7 +14,7 @@ use Erppush\Exception\WeException;
 class BaseErppush
 {
     
-    const APIHOST = 'http://erp.beta.yuanbenjiandan.com/';//请求API域名
+    const APIHOST = 'http://erp-platform.beta.xiaoyuchaoshi.com/';//请求API域名
     const DIR = __DIR__; //所在目录
 
     protected static $token; //token

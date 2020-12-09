@@ -1,5 +1,5 @@
 <?php
-use ybjd\Erppush;
+use Erppush\Erppush;
 require './vendor/autoload.php';
 
 $erpPush = new Erppush([
@@ -182,11 +182,11 @@ try {
 
 
 	# 图片保存示例
-	
-	// $path   = 'data/image/';//保存目录
-	// $imgurl = $erpPush->downImages('http://img.xiaoyuchaoshi.com/upload/20200814/20200814113313366.png',$path);
-	// $imgurl = data/image/20201010115636upload_pic_1602302196011_0.jpg
-	
+	/*
+	$path   = 'data/image/';//保存目录
+	$imgurl = $erpPush->downImages('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1607513621953&di=938d0bfa4b5e45a601e136cdf1f3188d&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180906%2F1926d16a272a49f5b8cbafdc2d68628c.png',$path);
+	$imgurl = data/image/20201010115636upload_pic_1602302196011_0.jpg
+	*/
 
 	# 获取推送数据
 	// $res = $erpPush->getPushData();

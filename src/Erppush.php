@@ -108,25 +108,24 @@ class Erppush extends BaseErppush{
      * @param  string $filename 文件名
      * @return string $url   
      */
-   public function downImages($source='', $dir='', $filename='') {
+    public function downImages($source='', $dir='', $filename='') {
    		if(empty($source)) return false;
 
    		$dir = !empty($dir) ? $dir : 'data/image/';
 
         if(!$this->mkdirs($dir)) return false;
 		if(substr($source, 0,4)=='http') {
-            $opts = array(
-                'http'    => array(
-                  'method'  => "GET",
-                  // 'timeout' => 5,//超时时间
-                )
-            );
 
-            $filename = $filename ? $filename : basename($source);
+			if(empty($filename)) {
+				$ext = pathinfo($source, PATHINFO_EXTENSION);
+				$ext = $ext ? $ext : 'jpg';
+				$filename = md5(basename($source)) . '.' . $ext;
+			}
+
 			$path = $dir . $filename;
-
 			if(!file_exists($path)) {
-				$content = @file_get_contents($source,false, stream_context_create($opts));
+				$curlClass = new Curl();
+				$content   = $curlClass->httpRequest($source, 'get', [], array('user-agent:'.'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36'));
 	            if($content) {
 					file_put_contents($path, $content);
 
@@ -139,7 +138,7 @@ class Erppush extends BaseErppush{
 			}
         }
         return false;
-   }
+    }
 
    /**
     * 订单完成
