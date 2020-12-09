@@ -1,0 +1,21 @@
+{
+    "name": "ybjd/erp",
+    "type": "library",
+    "description": "ybjd erppush sdk",
+    "keywords": ["ybjd", "erp", "sdk", "ybjderp"],
+    "homepage": "https://github.com/XiaoRadid/ydjderp.git",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ybjd",
+            "email": "",
+            "homepage": "https://github.com/XiaoRadid/ydjderp.git"
+        }
+    ],
+    "require": {
+        "php": ">=5.3"
+    },
+    "autoload": {
+        "psr-4": {"ybjd\\erp\\": "src/"},
+    }
+}
