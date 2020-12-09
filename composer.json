@@ -1,9 +1,8 @@
 {
     "name": "ybjd/erppush",
-    "type": "library",
-    "description": "erp推送",
+    "description": "ybjd erp推送",
     "keywords": ["ybjd", "erp", "ybjderp"],
-    "homepage": "https://github.com/XiaoRadid/ybjderp.git",
+    "type": "library",
     "license": "MIT",
     "authors": [
         {
