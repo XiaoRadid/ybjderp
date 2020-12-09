@@ -1,13 +1,17 @@
-﻿#### 环境(PHP>=5.3)
+﻿#### 安装(PHP>=5.3.29)
+composer require ybjd/erppush
 
 #### 实现的接口
 getPushData      获取推送过来的数据
 pushOrder        订单推送
 checkOrderImport 检测订单是否推送成功
-downImages       图片保存操作
+orderFinish      订单完成推送
+orderRefund      订单退款推送
+downImages       图片保存
 
 #### 示例
-include_once "ybjderp/Erppush.php";
+use ybjd/erppush;
+
 $erpPush = new Erppush([
     'username'  => 'test',//账号名
     'password'  => 'test',//密码
