@@ -1,6 +1,6 @@
 ﻿#### 安装(PHP>=5.4.45)
 composer require ybjd/erppush
-  
+
 #### 实现的接口
 getPushData      获取推送过来的数据  
 pushOrder        订单推送  
