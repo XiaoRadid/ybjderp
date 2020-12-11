@@ -62,6 +62,54 @@ class Erppush extends BaseErppush{
 	}
 
 	/**
+	 * 批量订单推送
+	 */
+	public function batchPushOrder($data=array()) {
+		
+		if(!is_array($data) || empty($data)){
+			throw new WeException(103);
+		}
+		$order = array();
+		foreach ($data as $k => $v) {
+			$order[$v['order_no']][] = $v;
+		}
+
+		$param = array();
+		foreach ($order as $ov) {
+			$goods = array();
+			foreach ($ov as $gk) {
+				$goods[] = array(
+					'goods_sku'  => $gk['goods_sku'],
+					'goods_name' => $gk['goods_name'],
+					'goods_nums' => $gk['goods_nums'],
+					'remarks' 	 => $gk['remarks'],
+				);
+			}
+			$param[] = array(
+				'order_no' => $gk['order_no'],
+				'goods'    => $goods,
+				'accept_name' => $gk['accept_name'],
+				'telphone'    => $gk['telphone'],
+				'province'    => $gk['province'],
+				'city'    => $gk['city'],
+				'area'    => $gk['area'],
+				'address' => $gk['address'],
+			);
+		}
+		$url   = self::APIHOST . 'index.php?controller=order&action=third_asynchpush_order';
+		$curlClass = new Curl();
+		$postData  = array('order_data' => json_encode($param));
+		$res = $curlClass->httpRequest($url, 'post', $postData, array('token:' . $this->getToken()));
+		$res = json_decode($res, 1);
+		
+		if(empty($res))
+			throw new WeException(-1);
+		if($res['code'] != 200)
+			throw new WeException($res['code'], $res['msg']);
+		return $res;
+	}
+	
+	/**
 	 * 检测订单是否推送成功
 	 * array
 	 */

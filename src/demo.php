@@ -106,6 +106,61 @@ try {
 	  ),
 	)*/
 
+	# 订单批量推送示例
+	/*$order = array(
+		0 => array(
+			'order_no'    => '202004261802062000',//订单编号
+			'goods_sku'   => 'X08514012',//商品编码
+			'goods_name'  => '商品1',//商品名称
+			'goods_nums'  => 1,//购买数量
+			'remarks'     => '备注1',//备注
+			'accept_name' => '张三',//收货人
+			'telphone'    => '13025898958',//收货人联系电话
+			'province'    => '广东省',//收货人所在省
+			'city' 	   	  => '深圳市',//收货人所在市
+			'area' 	      => '龙华区',//收货人所在区
+			'address' 	  => '龙华街道油富商城',//收货人详细地址
+		),
+		1 => array(
+			'order_no'    => '202004261802062000',
+			'goods_sku'   => 'X12812023',
+			'goods_name'  => '商品2',
+			'goods_nums'  => 1,
+			'remarks'     => '备注2',
+			'accept_name' => '张三',
+			'telphone'    => '13025898958',
+			'province'    => '广东省',
+			'city' 	   	  => '深圳市',
+			'area' 	      => '龙华区',
+			'address' 	  => '龙华街道油富商城',
+		),
+		2 => array(
+			'order_no'    => '202004261802062001',
+			'goods_sku'   => 'S0214140-3',
+			'goods_name'  => '商品3',
+			'goods_nums'  => 1,
+			'remarks'     => '备注3',
+			'accept_name' => '张三3',
+			'telphone'    => '13025898958',
+			'province'    => '广东省3',
+			'city' 	   	  => '深圳市3',
+			'area' 	      => '龙华区3',
+			'address' 	  => '龙华街道油富商城3',
+		),
+	);
+	$res = $erpPush->batchPushOrder($order);
+	echo "<pre>";var_export($res);die;
+	*/
+	//返回示例
+	/*
+	$res = array (
+	  'code' => 200,//200：成功，其他：失败
+	  'msg' => '已加入任务队列',
+	  'data' => 
+	  array (
+	  ),
+	)*/
+
 	# 订单退款推送示例
 	/*$order = array(
 		'order_no'    => '2020090108494741124',//订单号
