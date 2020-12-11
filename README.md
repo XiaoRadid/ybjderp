@@ -3,12 +3,12 @@ composer require ybjd/erppush
   
 #### 实现的接口
 getPushData      获取推送过来的数据  
-pushOrder        订单推送  
-batchPushOrder   订单批量推送 
-checkOrderImport 检测订单是否推送成功  
-orderFinish      订单完成推送  
-orderRefund      订单退款推送  
-downImages       图片保存  
+pushOrder        订单推送    
+batchPushOrder   订单批量推送   
+checkOrderImport 检测订单是否推送成功    
+orderFinish      订单完成推送    
+orderRefund      订单退款推送    
+downImages       图片保存    
   
 #### 示例
 ```php
